@@ -9,10 +9,10 @@
     require('config.php');
     session_start();
     if (isset($_POST['email'])) {
-      $username = stripslashes($_REQUEST['email']);
-      $username = mysqli_real_escape_string($conn, $email);
-      $password = stripslashes($_REQUEST['mpd']);
-      $password = mysqli_real_escape_string($conn, $mpd);
+      $email = stripslashes($_REQUEST['email']);
+      $email = mysqli_real_escape_string($conn, $email);
+      $mpd = stripslashes($_REQUEST['mpd']);
+      $mpd = mysqli_real_escape_string($conn, $mpd);
       $query = "SELECT * FROM `utilisateur` WHERE email='$email' and mpd='" . hash('sha256', $mpd) . "'";
       $result = mysqli_query($conn, $query) or die();
       $rows = mysqli_num_rows($result);
