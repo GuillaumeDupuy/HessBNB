@@ -3,19 +3,19 @@
     <div class="container py-xl-4 py-lg-3">
         <div class="row footer-grids">
             <div class="col-lg-2 col-6 footer-grid">
-                <h3 class="mb-sm-4 mb-3 pb-lg-3">Acceuil</h3>
+                <h3 class="mb-sm-4 mb-3 pb-lg-3">Accueil</h3>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="index.html">Acceuil</a>
+                        <a href="index.php">Accueil</a>
                     </li>
                     <li>
-                        <a href="#about">About Us</a>
+                        <a href="index.php#about">About Us</a>
                     </li>
                     <li>
-                        <a href="#services">Services</a>
+                        <a href="index.php#services">Services</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact Us</a>
+                        <a href="index.php#contact">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -23,10 +23,10 @@
                 <h3 class="mb-sm-4 mb-3 pb-lg-3">Compagnie</h3>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#find">Annonces</a>
+                        <a href="annonce.php">Annonces</a>
                     </li>
                     <li>
-                        <a href="#places">Villes populaires</a>
+                        <a href="index.php#places">Villes populaires</a>
                     </li>
                 </ul>
             </div>
@@ -44,17 +44,17 @@
             <div class="col-lg-2 col-6 footer-grid text-lg-right">
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#find">Annonces</a>
+                        <a href="index.php#find">Annonces</a>
                     </li>
                     <li>
-                        <a href="#apps">Apps</a>
+                        <a href="index.php#apps">Apps</a>
                     </li>
                 </ul>
             </div>
             <div class="col-lg-4 footer-grid mt-lg-0 mt-4">
                 <div class="footer-logo">
                     <h2 class="text-lg-center text-center">
-                        <a class="logo text-wh font-weight-bold" href="index.html"><span class="text-bl">Air</span>Hess</a>
+                        <a class="logo text-wh font-weight-bold" href="index.php"><span class="text-bl">Air</span>Hess</a>
                     </h2>
                 </div>
             </div>

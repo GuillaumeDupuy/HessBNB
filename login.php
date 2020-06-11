@@ -1,44 +1,39 @@
 <?php include("inc/header.inc.php"); ?>
+<?php require_once("inc/data.inc.php"); ?>
 
 <!-- inner banner -->
-<div class="inner-banner-w3ls py-5" id="home">
+<div class="inner-banner-w3ls py-5">
   <div class="container py-xl-5 py-lg-3">
     <!-- login  -->
 
     <?php
+    //Partie sur le systeme de login
     require('config.php');
-    session_start();
-    if (isset($_POST['email'])) {
-      $email = stripslashes($_REQUEST['email']);
-      $email = mysqli_real_escape_string($conn, $email);
-      $mpd = stripslashes($_REQUEST['mpd']);
-      $mpd = mysqli_real_escape_string($conn, $mpd);
-      $query = "SELECT * FROM `utilisateur` WHERE email='$email' and mpd='" . hash('sha256', $mpd) . "'";
-      $result = mysqli_query($conn, $query) or die();
-      $rows = mysqli_num_rows($result);
-      if ($rows == 1) {
-        $_SESSION['email'] = $email;
-        header("Location: admin.php ");
-      } else {
-        $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
+    $result = $pdo->query("SELECT * FROM utilisateur");
+    $admin = $result->fetch(PDO::FETCH_ASSOC);
+    if (!empty($_POST)) {
+      if ($admin["email"] === $_POST["email"] && $admin["mdp"] === $_POST["mdp"]) {
+        session_start();
+        $_SESSION["email"] = $admin["email"];
+        $_SESSION["connect"] = 1;
       }
-    }
-    ?>
+    } ?>
 
     <div class="modal-body my-5 pt-4">
       <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold">
         Login Now
       </h3>
-      <form action="" method="post" name="login">
+
+      <form class="box" action="" method="post" name="login">
         <div class="form-group">
           <label class="col-form-label">Email</label>
-          <input type="text" class="form-control" placeholder="email" name="email" />
+          <input type="text" class="form-control" placeholder="loremipsum@email.com" name="email" />
         </div>
         <div class="form-group">
           <label class="col-form-label">Password</label>
-          <input type="password" class="form-control" placeholder="Mot de passe" name="mpd" />
+          <input type="password" class="form-control" placeholder="*****" name="mdp" />
         </div>
-        <button type="submit" class="btn button-style-w3">Login</button>
+        <button type="submit" class="btn button-style-w3">Connexion</button>
         <div class="row sub-w3l mt-3 mb-5">
           <div class="col-sm-6 sub-w3layouts_hub">
             <input type="checkbox" id="brand1" value="" />
@@ -51,10 +46,14 @@
         </div>
         <p class="text-center dont-do text-style-w3ls text-li">
           Don't have an account?
-          <a href="register.html" class="font-weight-bold text-li">
+          <a href="register.php" class="font-weight-bold text-li">
             Register Now</a>
         </p>
+        <?php if (!empty($message)) { ?>
+          <p class="errorMessage"><?php echo $message; ?></p>
+        <?php } ?>
       </form>
+
     </div>
     <!-- //login -->
   </div>

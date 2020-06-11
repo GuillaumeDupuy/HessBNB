@@ -31,8 +31,10 @@
   <!-- Style-CSS -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
   <!-- Font-Awesome-Icons-CSS -->
-  <!-- //Custom-Files -->
-
+  <!-- JS -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Web-Fonts -->
   <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet" />
   <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet" />
@@ -57,8 +59,8 @@
             <label for="drop" class="toggle">Menu</label>
             <input type="checkbox" id="drop" />
             <ul class="menu">
-              <li><a href="index.php">Acceuil</a></li>
-              <li><a href="annonces.php">Annonces</a></li>
+              <li><a href="index.php">Accueil</a></li>
+              <li><a href="annonce.php">Annonces</a></li>
               <li>
                 <!-- First Tier Drop Down -->
                 <label for="drop-2" class="toggle toogle-2">Pages
@@ -68,13 +70,29 @@
                   <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                 <input type="checkbox" id="drop-2" />
                 <ul>
-                  <li><a href="index.php" class="drop-text">About Us</a></li>
-                  <li><a href="index.php" class="drop-text">Services</a></li>
+                  <li><a href="#about" class="drop-text">About Us</a></li>
+                  <li><a href="#services" class="drop-text">Services</a></li>
                 </ul>
               </li>
-              <li><a href="index.php">Contact Us</a></li>
+
+              <li><a href="index.php#contact">Contact Us</a></li>
               <li><a href="login.php">Login</a></li>
               <li><a href="register.php">Register</a></li>
+
+
+              <li><a href="profil.php">Profil</a></li>
+
+              <!-- <li> 
+                <ul>
+                  <li>
+                    <?php /*
+                    if (!empty($_SESSION)) {
+                      if ($_SESSION['connect'] == 1) { ?>
+                  <li><a href="profil.php">Profil</a></li>
+              <?php  }
+                    } */ ?>
+              </li> -->
+
             </ul>
           </nav>
         </div>
