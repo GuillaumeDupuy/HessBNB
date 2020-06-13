@@ -1,10 +1,7 @@
 <?php include("inc/header.inc.php"); ?>
 <?php require_once("inc/data.inc.php"); ?>
 
-<br>
-<br>
-<br>
-<br>
+<br><br><br><br>
 
 <div class="container">
     <div class="row">
@@ -12,6 +9,8 @@
             <div class="list-group ">
                 <a href="profil.php" class="list-group-item list-group-item-action active">Dashboard</a>
                 <a href="card.php" class="list-group-item list-group-item-action">Card</a>
+                <a href="reservation.php" class="list-group-item list-group-item-action">Mes réservations</a>
+                <a href="annonce.php" class="list-group-item list-group-item-action">Mes annonces</a>
             </div>
         </div>
         <div class="col-md-9">
@@ -27,7 +26,7 @@
                         <div class="col-md-12">
                             <?php
 
-                            $base_de_donnee = $pdo->query("SELECT * FROM utilisateur ORDER BY id_connect");
+                            $base_de_donnee = $pdo->query("SELECT * FROM utilisateur ORDER BY id_utilisateur");
                             while ($utilisateur = $base_de_donnee->fetch(PDO::FETCH_OBJ)) { ?>
                                 <form>
                                     <div class="form-group row">

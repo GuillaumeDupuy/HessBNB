@@ -1,26 +1,43 @@
 
-<?php include("inc/header.inc.php"); ?>
+<?php 
+    include("inc/header.inc.php");
+    require('config.php');
+    if (!empty($_POST)) {
+        $_POST["titre"] = htmlentities($_POST["titre"], ENT_QUOTES);
+        $_POST["description"] = htmlentities($_POST["description"], ENT_QUOTES);
+        $_POST["adresse"] = htmlentities($_POST["adresse"], ENT_QUOTES);
+        $_POST["ville"] = htmlentities($_POST["ville"], ENT_QUOTES);
+        $_POST["code_postal"] = htmlentities($_POST["code_postal"], ENT_QUOTES);
+        $_POST["departement"] = htmlentities($_POST["departement"], ENT_QUOTES);
+        $_POST["region"] = htmlentities($_POST["region"], ENT_QUOTES);
+        $_POST["date_deb"] = htmlentities($_POST["date_deb"], ENT_QUOTES);
+        $_POST["date_fin"] = htmlentities($_POST["date_fin"], ENT_QUOTES);
+        $_POST["prix"] = htmlentities($_POST["prix"], ENT_QUOTES);
+        $_POST["nbr_place"] = htmlentities($_POST["nbr_place"], ENT_QUOTES);
+        $_POST["photos"] = htmlentities($_POST["photos"], ENT_QUOTES);
+        $result_add = $pdo->exec("INSERT INTO annonce (titre, description, adresse, ville, code_postal, departement, region, date_deb, date_fin, prix, nbr_place, photos)
+        VALUES ('$_POST[titre]', '$_POST[description]', '$_POST[adresse]', '$_POST[ville]', '$_POST[code_postal]', '$_POST[departement]', '$_POST[region]', '$_POST[date_deb]', '$_POST[date_fin]', '$_POST[prix]', '$_POST[nbr_place]', '$_POST[photos]')");
+    }
+    ?>
+    <div class="container container_ann"> 
         <?php
-            $pdo = new PDO('mysql:host=localhost;dbname=airbnb', 'root', '', 
-            array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
-            if (!empty($_POST)) {
-                $_POST["titre"] = htmlentities($_POST["titre"], ENT_QUOTES);
-                $_POST["description"] = htmlentities($_POST["description"], ENT_QUOTES);
-                $_POST["adresse"] = htmlentities($_POST["adresse"], ENT_QUOTES);
-                $_POST["ville"] = htmlentities($_POST["ville"], ENT_QUOTES);
-                $_POST["code_postal"] = htmlentities($_POST["code_postal"], ENT_QUOTES);
-                $_POST["departement"] = htmlentities($_POST["departement"], ENT_QUOTES);
-                $_POST["region"] = htmlentities($_POST["region"], ENT_QUOTES);
-                $_POST["date_deb"] = htmlentities($_POST["date_deb"], ENT_QUOTES);
-                $_POST["date_fin"] = htmlentities($_POST["date_fin"], ENT_QUOTES);
-                $_POST["prix"] = htmlentities($_POST["prix"], ENT_QUOTES);
-                $_POST["nbr_place"] = htmlentities($_POST["nbr_place"], ENT_QUOTES);
-                $_POST["photos"] = htmlentities($_POST["photos"], ENT_QUOTES);
-                $result_add = $pdo->exec("INSERT INTO annonce (titre, description, adresse, ville, code_postal, departement, region, date_deb, date_fin, prix, nbr_place, photos)
-                VALUES ('$_POST[titre]', '$_POST[description]', '$_POST[adresse]', '$_POST[ville]', '$_POST[code_postal]', '$_POST[departement]', '$_POST[region]', '$_POST[date_deb]', '$_POST[date_fin]', '$_POST[prix]', '$_POST[nbr_place]', '$_POST[photos]')");
-                    }
-            ?>
-        <div class="container">  
+            //$result = $pdo->query("SELECT * FROM annonce INNER JOIN utilisateur on utilisateur.Id_annonce = annonce.Id_annonce");
+            $result = $pdo->query("SELECT * FROM annonce");
+            while ($annonce = $result->fetch(PDO::FETCH_OBJ)) {?>
+                <div class="card" style="width: 18rem;">
+                    <img src=<?php $annonce->titre ?> class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $annonce->titre ?></h5>
+                        <p class="card-text"><?php echo $annonce->description ?></p>
+                        <a href="?annonce=<?php echo $annonce->Id_annonce?>" class="btn btn-primary">Voir l'annonce</a>
+                    </div>
+                </div>
+                <hr class="hr_ann">
+            <?php } ?>
+        </div>
+    <div>
+    <div class="container"> 
+            <h1>Ajouter une annonce</h1> 
             <form class="form_ann"method="POST" action="">
                <!-- <select class="form-control" onchange =changerCatego(this.value)>
                     <option <?php // if($_GET['catego'] == 'experiences') { ?> selected <?php// } ?>value="experiences">Expériences</option>

@@ -52,6 +52,10 @@ h6 {
   color: #999;
 }
 
+h1{
+  text-align: center;
+}
+
 #textewhite {
   color: white;
 }
@@ -788,6 +792,7 @@ a.service-btn:hover {
 .card {
   background-color: #333;
   border: none;
+  margin: 10px;
 }
 
 h5.card-title a {
@@ -806,6 +811,25 @@ h5.card-title a {
 .card-body p {
   color: #eee;
   font-size: 14px;
+}
+
+hr.hr_ann {
+	display: block;
+	clear: both;
+	height: 0;
+	margin: 40px 0 80px;
+	padding: 0;
+	border: 0;
+	font-family: arial;
+	text-align: center;
+	font-size: 60px;
+	line-height: 1;
+}
+hr.hr_ann:after {
+	content: "\272D \272D \272D";
+	height: 0;			
+	letter-spacing: 1em;
+	color: #aaa;
 }
 
 /* //blog */

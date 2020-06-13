@@ -13,7 +13,6 @@
     $admin = $result->fetch(PDO::FETCH_ASSOC);
     if (!empty($_POST)) {
       if ($admin["email"] === $_POST["email"] && $admin["mdp"] === $_POST["mdp"]) {
-        session_start();
         $_SESSION["email"] = $admin["email"];
         $_SESSION["connect"] = 1;
       }
