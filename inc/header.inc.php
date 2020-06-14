@@ -68,27 +68,23 @@
                   <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                 <input type="checkbox" id="drop-2" />
                 <ul>
-                  <li><a href="#about" class="drop-text">About Us</a></li>
+                  <li><a href="#about" class="drop-text">à propos</a></li>
                   <li><a href="#services" class="drop-text">Services</a></li>
                 </ul>
               </li>
-
-              <li><a href="index.php#contact">Contact Us</a></li>+
-
-                  <li>
+              <li><a href="index.php#contact">Contactez-nous</a></li>+
                   <?php
-                    session_start();  
-                    var_dump($_SESSION);
-                    if (!empty($_SESSION)) {
-                      if (!empty($_SESSION['email'])) ?>
-                        <li><a href="profil.php">Profil</a></li>
-                      <?php}
+                    session_start();
+                    $_SESSION["connect"] = 0;
+                    //var_dump($_SESSION);
+                    if (empty($_SESSION["email"])) { ?>
+                      <li><a href="login.php">Connexion</a></li>
+                      <li><a href="register.php">Inscription</a></li>
+                    <?php }
                     else {?>
-                      <li><a href="login.php">Login</a></li>
-                      <li><a href="register.php">Register</a></li>
-              <?php  } ?>
-              
-
+                      <li><a href="profil.php">Profil</a></li>
+                      <li><a href="logout.php">Déconnexion</a></li>
+                    <?php } ?>
             </ul>
           </nav>
         </div>

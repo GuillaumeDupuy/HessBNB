@@ -25,8 +25,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <?php
-
-                            $base_de_donnee = $pdo->query("SELECT * FROM utilisateur ORDER BY id_utilisateur");
+                            $base_de_donnee = $pdo->query("SELECT * FROM utilisateur WHERE email = '$_SESSION[email]'");
                             while ($utilisateur = $base_de_donnee->fetch(PDO::FETCH_OBJ)) { ?>
                                 <form>
                                     <div class="form-group row">
@@ -110,7 +109,6 @@
 <br>
 
 <div class="sucess">
-    <a class="logout2" href="logout.php">Déconnexion</a>
     <p class="logout">Voici votre tableau de bord pour voir vos informations.</p>
 </div>
 

@@ -1831,4 +1831,9 @@ label.col2-form-label {
   }
 }
 
+.errorlog {
+  font-size: 30px;
+  color: red;
+}
+
 /* //responsive */
