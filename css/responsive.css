@@ -1,0 +1,386 @@
+/* responsive */
+
+@media (max-width: 1600px) {
+  .style-banner {
+    padding-top: 14em;
+  }
+}
+
+@media (max-width: 1440px) {
+  .img-posi-w3pvt {
+    width: 10%;
+  }
+
+  .style-banner {
+    padding-top: 12em;
+  }
+
+  .mian-content-wthree {
+    min-height: 52vw;
+  }
+}
+
+@media (max-width: 1280px) {
+  .w3pvtits-services-grids {
+    padding: 2em;
+  }
+
+  .img-posi-w3pvt {
+    width: 6%;
+  }
+
+  .style-banner {
+    padding-top: 11em;
+  }
+}
+
+@media (max-width: 1080px) {
+  .footer-grid ul li a,
+  .footer-grid ul li {
+    font-size: 13px;
+  }
+
+  a.logo {
+    font-size: 54px;
+  }
+
+  p.copy-right-grids {
+    font-size: 13px;
+  }
+
+  .demo > li {
+    max-width: 295px;
+  }
+
+  h3.title-w3 {
+    font-size: 38px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  ul.apps-lists li a {
+    padding: 14px 25px;
+    font-size: 15px;
+  }
+
+  ul.apps-lists li a span {
+    font-size: 22px;
+  }
+
+  .img-podi-w3ls {
+    width: 18%;
+  }
+
+  .serv-w3mk {
+    padding: 0;
+  }
+
+  .team-img {
+    min-height: 280px;
+  }
+
+  .card-body p {
+    color: #eee;
+    font-size: 13px;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+
+  nav.navbar {
+    padding: 6px 0;
+  }
+
+  .mian-content-wthree {
+    min-height: 720px;
+  }
+
+  p.counter {
+    font-size: 2.6em;
+  }
+}
+
+@media (max-width: 991px) {
+  .contact_grid_right input[type="text"],
+  .contact_grid_right input[type="email"],
+  .contact_grid_right textarea {
+    padding: 14px 15px;
+    font-size: 13px;
+  }
+
+  .contact_grid_right textarea {
+    min-height: 160px;
+  }
+
+  .demo > li {
+    max-width: 215px;
+  }
+
+  .serv-w3mk {
+    padding: 0 1em;
+  }
+
+  .w3pvtits-services-grids {
+    padding: 3em;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  #services {
+    padding-bottom: 4em !important;
+  }
+
+  .img-posi-w3pvt {
+    width: 12%;
+  }
+
+  .team-img {
+    min-height: 330px;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 15px;
+    padding: 0;
+  }
+
+  .style-banner h3 {
+    font-size: 48px;
+  }
+
+  .style-banner p {
+    font-size: 15px;
+  }
+
+  .mian-content-wthree {
+    min-height: 780px;
+  }
+
+  .style-banner h3 span {
+    font-size: 44px;
+  }
+
+  .agents-w3 {
+    width: 17%;
+  }
+}
+
+@media (max-width: 900px) {
+  .agents-w3 {
+    left: 4%;
+  }
+}
+
+@media (max-width: 800px) {
+  .img-podi-w3ls {
+    width: 13%;
+  }
+
+  .agents-w3 {
+    left: 0;
+    width: 19%;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-posi-w3pvt {
+    width: 14%;
+  }
+}
+
+@media (max-width: 736px) {
+  .w3social-icons ul li a {
+    font-size: 14px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .demo > li {
+    max-width: 240px;
+  }
+
+  ul.apps-lists li a {
+    padding: 14px 17px;
+    font-size: 14px;
+  }
+
+  h3.title-w3 {
+    font-size: 36px;
+  }
+
+  .team-img {
+    min-height: 290px;
+  }
+
+  .style-banner h3 {
+    font-size: 42px;
+  }
+
+  .style-banner h3 span {
+    font-size: 36px;
+    padding: 0px 14px 5px;
+  }
+
+  .style-banner p {
+    font-size: 14px;
+  }
+
+  .style-banner {
+    padding-top: 10em;
+  }
+
+  .mian-content-wthree {
+    min-height: 740px;
+  }
+
+  .w3layouts_stats_left {
+    padding: 0;
+  }
+
+  p.counter {
+    font-size: 2.2em;
+  }
+
+  .agents-w3 {
+    width: 17%;
+  }
+}
+
+@media (max-width: 600px) {
+  ul.apps-lists li a {
+    padding: 13px 9px;
+    font-size: 13px;
+  }
+
+  ul.apps-lists li a span {
+    font-size: 18px;
+  }
+
+  .popup {
+    margin: 5em auto;
+  }
+}
+
+@media (max-width: 480px) {
+  h3.title-w3 {
+    font-size: 32px;
+  }
+
+  .demo > li {
+    max-width: 202px;
+  }
+
+  #services {
+    padding-bottom: 11em !important;
+  }
+
+  .img-posi-w3pvt {
+    width: 16%;
+  }
+
+  .style-banner h3 {
+    font-size: 40px;
+  }
+
+  .style-banner h3 span {
+    font-size: 33px;
+  }
+
+  .style-banner {
+    padding-top: 9em;
+  }
+
+  .style-banner p {
+    font-size: 12px;
+  }
+
+  .mian-content-wthree {
+    min-height: 700px;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+
+  .agents-w3 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 440px) {
+  .contact_grid_right textarea {
+    min-height: 140px;
+  }
+
+  .demo > li {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  p.copy-right-grids {
+    letter-spacing: 1px;
+  }
+
+  .footer-grid ul li a,
+  .footer-grid ul li {
+    font-size: 12px;
+  }
+
+  .contact_grid_right textarea {
+    min-height: 120px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  h3.title-w3 {
+    font-size: 26px;
+  }
+
+  .team-img {
+    min-height: 300px;
+  }
+
+  .img-posi-w3pvt {
+    width: 24%;
+  }
+
+  h3.title-sub {
+    font-size: 22px;
+  }
+
+  .style-banner h3 {
+    font-size: 30px;
+  }
+
+  .style-banner p {
+    font-size: 11px;
+  }
+
+  .style-banner {
+    padding-top: 6.5em;
+  }
+
+  .style-banner h3 span {
+    font-size: 26px;
+  }
+
+  .mian-content-wthree {
+    min-height: 620px;
+  }
+
+  .agents-w3 {
+    width: 60%;
+  }
+}
+
+.errorlog {
+  font-size: 30px;
+  color: red;
+}
+
+/* //responsive */

@@ -113,55 +113,6 @@
 </section>
 <!-- //banner bottom -->
 
-<!-- services -->
-<div class="w3pvtits-services py-5" id="services">
-  <div class="container py-xl-5 py-lg-3">
-    <h3 class="title-w3 mb-2 text-center text-wh font-weight-bold">
-      Nos différents <span>services</span>
-    </h3>
-    <div class="row w3pvtits-services-row text-center pt-4">
-      <div class="col-lg-4">
-        <div class="w3pvtits-services-grids">
-          <div class="icon-effect-wthree">
-            <span class="fa fa-home ser-icon"></span>
-          </div>
-          <h4 class="text-bl my-4">Service 1</h4>
-          <p class="text-left">
-            Nos villas
-          </p>
-          <a class="service-btn btn mt-xl-5 mt-4" href="#">Read More<span class="fa fa-long-arrow-right ml-2"></span></a>
-        </div>
-      </div>
-      <div class="col-lg-4 serv-w3mk my-lg-0 my-5">
-        <div class="w3pvtits-services-grids">
-          <div class="icon-effect-wthree">
-            <span class="fa fa-building ser-icon"></span>
-          </div>
-          <h4 class="text-bl my-4">Service 2</h4>
-          <p class="text-left">
-            Nos appartements
-          </p>
-          <a class="service-btn btn mt-xl-5 mt-4" href="#">Read More<span class="fa fa-long-arrow-right ml-2"></span></a>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="w3pvtits-services-grids">
-          <div class="icon-effect-wthree">
-            <span class="fa fa-university ser-icon"></span>
-          </div>
-          <h4 class="text-bl my-4">Service 3</h4>
-          <p class="text-left">
-            Nos maisons
-          </p>
-          <a class="service-btn btn mt-xl-5 mt-4" href="#">Read More<span class="fa fa-long-arrow-right ml-2"></span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <img src="images/img.png" alt="services" class="img-fluid img-posi-w3pvt" />
-</div>
-<!-- //services -->
-
 <!-- places -->
 <section class="branches py-5" id="places">
   <div class="container py-xl-5 py-lg-3">
