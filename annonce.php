@@ -45,6 +45,8 @@
                     <option <?php // if($_GET['catego'] == 'competences') { ?> selected <?php// } ?> value="competences">Compétences</option>
                     <option <?php // if($_GET['catego'] == 'portfolios') { ?> selected <?php// } ?> value="portfolios">Portfolio</option>
                 </select> -->
+                <br>
+                <br>
                 <div class="form-group">
                     <label for="titre">Titre :</label>
                     <input type="texte" class="form-control" id="titre" name="titre">
