@@ -3,43 +3,12 @@
 
 <br><br><br><br>
 
-<?php
-
-if (!empty($_POST)) {
-
-
-    //***************************************** */
-    //Modification Base de données
-    //***************************************** */
-    if (!empty($_GET['modification'])) {
-        $id = $_GET['modification'];
-        $pdo->exec("UPDATE utilisateur SET prenom = \"$_POST[prenom]\" WHERE id_connect= $id");
-        $pdo->exec("UPDATE utilisateur SET nom = \"$_POST[nom]\" WHERE id_connect= $id");
-        $pdo->exec("UPDATE utilisateur SET email = \"$_POST[email]\" WHERE id_connect= $id");
-        $pdo->exec("UPDATE utilisateur SET mdp = \"$_POST[mdp]\" WHERE id_connect= $id");
-    }
-    //***************************************** */
-    //Suppression Base de données
-    //***************************************** */
-} else if (!empty($_GET)) {
-    if (!empty($_GET['delete'])) {
-        $to_suppr = $_GET['delete'];
-        $pdo->exec("DELETE FROM utilisateur WHERE id_connect = $to_suppr ");
-    }
-    if (!empty($_GET['modification'])) {
-
-        echo "en cours de modification de l'experience numero " . $_GET['modification'];
-    }
-}
-
-?>
-
 <div class="container">
     <div class="row">
         <div class="col-md-3 ">
             <div class="list-group ">
                 <a href="profil.php" class="list-group-item list-group-item-action active">Dashboard</a>
-                <a href="card.php" class="list-group-item list-group-item-action">Cartes</a>
+                <a href="card.php" class="list-group-item list-group-item-action">Card</a>
                 <a href="reservation.php" class="list-group-item list-group-item-action">Mes réservations</a>
                 <a href="annonce.php" class="list-group-item list-group-item-action">Mes annonces</a>
             </div>
@@ -60,15 +29,15 @@ if (!empty($_POST)) {
                             while ($utilisateur = $base_de_donnee->fetch(PDO::FETCH_OBJ)) { ?>
                                 <form>
                                     <div class="form-group row">
-                                        <label for="name" class="col-4 col2-form-label">Prenom</label>
+                                        <label for="name" class="col-4 col2-form-label">First Name</label>
                                         <div class="col-8">
-                                            <input name="prenom" id="prenom" placeholder="<?php echo $utilisateur->prenom; ?>" class="form-control here" type="text">
+                                            <input id="name" name="name" placeholder="<?php echo $utilisateur->prenom; ?>" class="form-control here" type="text">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="lastname" class="col-4 col2-form-label">Nom</label>
+                                        <label for="lastname" class="col-4 col2-form-label">Last Name</label>
                                         <div class="col-8">
-                                            <input id="nom" name="nom" placeholder="<?php echo $utilisateur->nom; ?>" class="form-control here" type="text">
+                                            <input id="lastname" name="lastname" placeholder="<?php echo $utilisateur->nom; ?>" class="form-control here" type="text">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -78,7 +47,7 @@ if (!empty($_POST)) {
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="timing Zone" class="col-4 col2-form-label">Fuseau horaire</label>
+                                        <label for="timing Zone" class="col-4 col2-form-label">Timing Zone</label>
                                         <div class="col-8">
                                             <select name="DropDownTimezone" id="DropDownTimezone" class="input-xlarge">
                                                 <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
@@ -94,8 +63,8 @@ if (!empty($_POST)) {
                                                 <option value="-3.0">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
                                                 <option value="-2.0">(GMT -2:00) Mid-Atlantic</option>
                                                 <option value="-1.0">(GMT -1:00 hour) Azores, Cape Verde Islands</option>
-                                                <option value="0.0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
-                                                <option selected="selected" value="1.0">(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
+                                                <option selected="selected" value="0.0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                                                <option value="1.0">(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
                                                 <option value="2.0">(GMT +2:00) Kaliningrad, South Africa</option>
                                                 <option value="3.0">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
                                                 <option value="3.5">(GMT +3:30) Tehran</option>
@@ -116,25 +85,21 @@ if (!empty($_POST)) {
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="newpass" class="col-4 col2-form-label">Nouveau Mot de passe</label>
+                                        <label for="newpass" class="col-4 col2-form-label">New Password</label>
                                         <div class="col-8">
-                                            <input id="mdp" name="mdp" placeholder="<?php echo $utilisateur->mdp; ?>" class="form-control here" type="text">
+                                            <input id="newpass" name="newpass" placeholder="<?php echo $utilisateur->mdp; ?>" class="form-control here" type="text">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="offset-4 col-8">
-                                            <button name="submit" type="submit" class="btn btn-primary">Mise a jour de mon profil</button>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <div class="offset-4 col-8">
-                                            <button name="submit" type="submit" class="btn btn-primary">Supprimer mon profil</button>
+                                            <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
                                         </div>
                                     </div>
                                 </form>
                             <?php } ?>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
